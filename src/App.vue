@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="container-full" id="app">
     <navbar></navbar>
     <editor></editor>
   </div>

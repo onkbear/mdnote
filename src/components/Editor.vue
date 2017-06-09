@@ -7,9 +7,6 @@
                       @change="update">
           </codemirror>
         </div>
-        <div class="pre">
-          <pre>test</pre>
-        </div>
       </div>
       <div class="col-xs-6">
         <div v-html="compiledMarkdown"></div>
