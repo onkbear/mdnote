@@ -1,7 +1,20 @@
 <template>
   <div class="editor">
-    <textarea :value="input" @input="update"></textarea>
-    <div v-html="compiledMarkdown"></div>
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="codemirror">
+          <codemirror :options="editorOption"
+                      @change="update">
+          </codemirror>
+        </div>
+        <div class="pre">
+          <pre>test</pre>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div v-html="compiledMarkdown"></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -12,7 +25,18 @@ export default {
   name: 'editor',
   data () {
     return {
-      input: '# hello'
+      input: '',
+      editorOption: {
+        value: 'hell',
+        tabSize: 2,
+        styleActiveLine: true,
+        lineNumbers: true,
+        line: true,
+        foldGutter: true,
+        styleSelectedText: true,
+        mode: 'markdown',
+        theme: 'monokai'
+      }
     }
   },
   computed: {
@@ -21,8 +45,9 @@ export default {
     }
   },
   methods: {
-    update: _.debounce(function (e) {
-      this.input = e.target.value
+    update: _.debounce(function (value) {
+      console.log('updated')
+      this.input = value
     }, 300)
   }
 }

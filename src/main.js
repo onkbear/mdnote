@@ -3,8 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import './assets/sass/app.scss'
+import Codemirror from './components/codemirror'
 
 Vue.config.productionTip = false
+
+Vue.component('codemirror', Codemirror)
 
 /* eslint-disable no-new */
 new Vue({
