@@ -3,6 +3,7 @@
 @import "../../../node_modules/github-markdown-css/github-markdown.css";
 
 $header-height: 50px;
+$main-heiht: calc(100vh - #{$header-height});
 
 body {
   padding-top: $header-height;
@@ -35,11 +36,13 @@ body {
 }
 
 .CodeMirror {
-  height: calc(100vh - #{$header-height}) !important;
+  height: $main-heiht !important;
 }
 
 .markdown-body {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 45px;
+  height: $main-heiht;
+  overflow-y: scroll;
 }
