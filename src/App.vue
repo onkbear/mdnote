@@ -8,6 +8,7 @@
 <script>
 import Editor from './components/Editor'
 import Navbar from './components/Navbar'
+require('github-markdown-css/github-markdown.css')
 
 export default {
   name: 'app',

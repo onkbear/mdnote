@@ -1,5 +1,6 @@
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap-sprockets";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap";
+@import "../../../node_modules/github-markdown-css/github-markdown.css";
 
 $header-height: 50px;
 
@@ -35,4 +36,10 @@ body {
 
 .CodeMirror {
   height: calc(100vh - #{$header-height}) !important;
+}
+
+.markdown-body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 45px;
 }

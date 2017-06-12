@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="col-xs-6">
-        <div v-html="compiledMarkdown"></div>
+        <div class="markdown-body" v-html="compiledMarkdown"></div>
       </div>
     </div>
   </div>
