@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Editor from './components/Editor'
-import Navbar from './components/Navbar'
+import Editor from './components/editor'
+import Navbar from './components/navbar'
 window.jQuery = window.$ = require('jquery')
 require('github-markdown-css/github-markdown.css')
 require('bootstrap-sass/assets/javascripts/bootstrap.min.js')
