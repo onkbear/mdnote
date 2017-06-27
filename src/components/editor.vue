@@ -24,7 +24,7 @@ export default {
     return {
       input: '',
       editorOption: {
-        value: 'hell',
+        value: '',
         tabSize: 2,
         styleActiveLine: true,
         lineNumbers: true,
@@ -36,6 +36,9 @@ export default {
       }
     }
   },
+  created: function () {
+    this.$on('apply-event', this.applyInput)
+  },
   computed: {
     compiledMarkdown: function () {
       return marked(this.input, { sanitize: true })
@@ -44,7 +47,10 @@ export default {
   methods: {
     update: _.debounce(function (value) {
       this.input = value
-    }, 300)
+    }, 300),
+    applyInput: function () {
+      this.$emit('applyInput', this.input)
+    }
   }
 }
 </script>
