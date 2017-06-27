@@ -43,7 +43,6 @@ export default {
   },
   methods: {
     update: _.debounce(function (value) {
-      console.log('updated')
       this.input = value
     }, 300)
   }
