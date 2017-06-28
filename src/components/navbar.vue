@@ -16,6 +16,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Download <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#" v-on:click="downloadMarkdown">Markdown</a></li>
+              <li><a href="#" v-on:click="downloadHTML">HTML</a></li>
             </ul>
           </li>
         </ul>
@@ -30,6 +31,9 @@ export default {
   methods: {
     downloadMarkdown: function () {
       this.$emit('download', 'md')
+    },
+    downloadHTML: function () {
+      this.$emit('download', 'html')
     }
   }
 }
