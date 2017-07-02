@@ -7,6 +7,7 @@
   require('codemirror/lib/codemirror.css')
   require('codemirror/mode/meta')
   require('codemirror/mode/markdown/markdown.js')
+  require('codemirror/addon/selection/active-line.js')
   require('codemirror/theme/monokai.css')
   export default {
     data: function () {
