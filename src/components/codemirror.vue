@@ -27,6 +27,12 @@
         _this.content = cm.getValue()
         _this.$emit('change', _this.content)
       })
+      this.editor.setOption('extraKeys', {
+        Tab: function (cm) {
+          var spaces = Array(cm.getOption('indentUnit') + 1).join(' ')
+          cm.replaceSelection(spaces)
+        }
+      })
     }
   }
 </script>
