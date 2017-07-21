@@ -3,3 +3,17 @@
 A Simple Markdown Editor.
 
 https://onkbear.github.io/mdnote/
+
+### Development
+
+```
+$ npm install
+```
+
+```
+$ npm run dev
+```
+
+### License
+
+[MIT](./LICENSE)
